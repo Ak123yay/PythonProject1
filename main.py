@@ -21,4 +21,10 @@ class PasswordManager:
             print(f"Site: {site}\nUsername: {info['username']}\nPassword: {info['password']}")
         else:
             print("No password found.")
-
+    def list_sites(self):
+        if self.passwords:
+            print("Saved sites:")
+            for site in self.passwords:
+                print(f"- {site}")
+        else:
+            print("No sites saved yet.")
